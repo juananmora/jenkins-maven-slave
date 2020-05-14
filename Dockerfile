@@ -1,7 +1,5 @@
 FROM jenkins/slave:latest 
 
-COPY jenkins-slave /usr/local/bin/jenkins-slave
-
 USER root
 
 ENV MAVEN_VERSION=3.5.4
@@ -45,4 +43,3 @@ RUN mkdir -p /home/jenkins/.ansible && \
     chown -R 1000:1000 /home/jenkins/.ssh
 USER jenkins
 
-ENTRYPOINT ["jenkins-slave"]
