@@ -25,3 +25,6 @@ RUN mkdir -p /home/jenkins/.ansible && \
     chown -R 1000:1000 /home/jenkins/.ssh
 USER jenkins
 
+WORKDIR /home/jenkins
+
+ENTRYPOINT ["jenkins-slave"]
